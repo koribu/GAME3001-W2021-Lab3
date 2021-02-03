@@ -8,6 +8,7 @@
 #include "Obstacle.h"
 #include "SpaceShip.h"
 #include "Target.h"
+#include "Tile.h"
 
 class PlayScene : public Scene
 {
@@ -30,8 +31,11 @@ private:
 	glm::vec2 m_mousePosition;
 	Target* m_pTarget;
 
-	
-	// UI Items
+	//Pathfinding functions and objects
+	void m_buildGrid();
+	void m_setGridEnabled(bool state) const;
+	std::vector<Tile*> m_pGrid;
+
 	
 };
 
